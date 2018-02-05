@@ -1,0 +1,5 @@
+iolab - I/O Experimentation Laboratory
+================================================================================
+
+This repository contains a set of I/O experiments that demonstrate different
+aspects of parallel I/O performance and parallel file systems.

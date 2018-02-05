@@ -1,0 +1,34 @@
+IOR-3.1.0: MPI Coordinated Test of Parallel I/O
+
+Began: Mon Feb  5 12:06:57 2018
+Command line used: /global/u2/g/glock/src/git/ior/src/ior -a POSIX -t 1m -b 1m -s 256 -F -C -e -r -M 80% -o ior_readtest_867662/testFile
+Machine: Linux nid00393
+
+Test 0 started: Mon Feb  5 12:06:57 2018
+Summary:
+	api                = POSIX
+	test filename      = ior_readtest_867662/testFile
+	access             = file-per-process
+	ordering in a file = sequential offsets
+	ordering inter file= constant task offsets = 1
+	clients            = 256 (16 per node)
+	memoryPerNode      = 75.44 GiB
+	repetitions        = 1
+	repetitionsPerFile = 1
+	repetitionsPerFileRW = 0
+	xfersize           = 1 MiB
+	blocksize          = 1 MiB
+	aggregate filesize = 64 GiB
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+read      5530       1024.00    1024.00    0.014743   11.85      6.55       11.85      0   
+remove    -          -          -          -          -          -          0.013904   0   
+
+Max Read:  5529.72 MiB/sec (5798.33 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt blksiz xsize aggsize API RefNum repPF repPFrw
+read         5529.72    5529.72    5529.72       0.00   11.85159 0 256 16 1 1 1 1 0 0 256 1048576 1048576 68719476736 POSIX 0 1 0
+
+Finished: Mon Feb  5 12:07:18 2018
