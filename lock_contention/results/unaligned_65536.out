@@ -1,0 +1,67 @@
+IOR-3.2.0: MPI Coordinated Test of Parallel I/O
+Began               : Thu Oct  4 17:33:46 2018
+Command line        : /global/homes/g/glock/sc18_pio/bin/ior -s 4096 -b 65536 -t 65536 -o /global/gscratch1/sd/glock/tempFile.hdf5 -f hdf5.ior
+Machine             : Linux nid00384
+Start time skew across all tasks: 0.00 sec
+TestID              : 0
+StartTime           : Thu Oct  4 17:33:46 2018
+Path                : /global/gscratch1/sd/glock
+FS                  : 451.6 TiB   Used FS: 37.6%   Inodes: 452.3 Mi   Used Inodes: 1.4%
+Participating tasks: 128
+
+Options: 
+api                 : HDF5
+apiVersion          : 
+test filename       : /global/gscratch1/sd/glock/tempFile.hdf5
+access              : single-shared-file
+type                : independent
+segments            : 4096
+ordering in a file  : sequential
+ordering inter file : no tasks offsets
+tasks               : 128
+clients per node    : 16
+repetitions         : 10
+xfersize            : 65536 bytes
+blocksize           : 65536 bytes
+aggregate filesize  : 32 GiB
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+Commencing write performance test: Thu Oct  4 17:33:46 2018
+write     70.01      64.00      64.00      0.010228   466.59     1.47       468.07     0   
+remove    -          -          -          -          -          -          0.941559   0   
+Commencing write performance test: Thu Oct  4 17:41:35 2018
+write     69.94      64.00      64.00      0.006126   466.84     1.69       468.53     1   
+remove    -          -          -          -          -          -          0.835286   1   
+Commencing write performance test: Thu Oct  4 17:49:24 2018
+write     72.28      64.00      64.00      0.004876   452.05     1.30       453.35     2   
+remove    -          -          -          -          -          -          0.849609   2   
+Commencing write performance test: Thu Oct  4 17:56:58 2018
+write     74.86      64.00      64.00      0.005058   436.28     1.42       437.70     3   
+remove    -          -          -          -          -          -          0.860500   3   
+Commencing write performance test: Thu Oct  4 18:04:17 2018
+write     68.56      64.00      64.00      0.004664   476.40     1.52       477.92     4   
+remove    -          -          -          -          -          -          1.09       4   
+Commencing write performance test: Thu Oct  4 18:12:16 2018
+write     70.79      64.00      64.00      0.005235   461.40     1.52       462.92     5   
+remove    -          -          -          -          -          -          1.38       5   
+Commencing write performance test: Thu Oct  4 18:20:00 2018
+write     72.36      64.00      64.00      0.004983   451.69     1.17       452.86     6   
+remove    -          -          -          -          -          -          1.19       6   
+Commencing write performance test: Thu Oct  4 18:27:34 2018
+write     73.04      64.00      64.00      0.004870   447.22     1.42       448.65     7   
+remove    -          -          -          -          -          -          1.21       7   
+Commencing write performance test: Thu Oct  4 18:35:04 2018
+write     69.65      64.00      64.00      0.005319   469.03     1.45       470.49     8   
+remove    -          -          -          -          -          -          0.892259   8   
+Commencing write performance test: Thu Oct  4 18:42:56 2018
+write     68.85      64.00      64.00      0.005462   474.48     1.48       475.96     9   
+remove    -          -          -          -          -          -          0.865248   9   
+Max Write: 74.86 MiB/sec (78.50 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write          74.86      68.56      71.03       1.93    1197.81    1097.02    1136.52      30.82  461.64563     0    128  16   10   0     0        1         0    0   4096    65536    65536   32768.0 HDF5      0
+Finished            : Thu Oct  4 18:50:53 2018
