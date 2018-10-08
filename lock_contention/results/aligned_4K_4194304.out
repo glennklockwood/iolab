@@ -1,0 +1,57 @@
+IOR-3.2.0: MPI Coordinated Test of Parallel I/O
+Began               : Fri Oct  5 18:54:35 2018
+Command line        : /global/homes/g/glock/sc18_pio/bin/ior -s 64 -b 4194304 -t 4194304 -O setAlignment=4K -o /global/gscratch1/sd/glock/tempFile_4k.hdf5 -k -f hdf5.ior
+Machine             : Linux nid00384
+Start time skew across all tasks: 0.00 sec
+TestID              : 0
+StartTime           : Fri Oct  5 18:54:35 2018
+Path                : /global/gscratch1/sd/glock
+FS                  : 451.6 TiB   Used FS: 37.7%   Inodes: 452.3 Mi   Used Inodes: 1.4%
+Participating tasks: 128
+
+Options: 
+api                 : HDF5
+apiVersion          : 
+test filename       : /global/gscratch1/sd/glock/tempFile_4k.hdf5
+access              : single-shared-file
+type                : independent
+segments            : 64
+ordering in a file  : sequential
+ordering inter file : no tasks offsets
+tasks               : 128
+clients per node    : 16
+repetitions         : 10
+xfersize            : 4 MiB
+blocksize           : 4 MiB
+aggregate filesize  : 32 GiB
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+Commencing write performance test: Fri Oct  5 18:54:35 2018
+write     699.88     4096       4096       0.031338   46.39      0.398229   46.82      0   
+Commencing write performance test: Fri Oct  5 18:55:27 2018
+write     686.21     4096       4096       0.007736   47.11      0.634733   47.75      1   
+Commencing write performance test: Fri Oct  5 18:56:19 2018
+write     629.45     4096       4096       0.007278   51.68      0.370644   52.06      2   
+Commencing write performance test: Fri Oct  5 18:57:16 2018
+write     703.55     4096       4096       0.006787   46.22      0.353149   46.58      3   
+Commencing write performance test: Fri Oct  5 18:58:07 2018
+write     688.87     4096       4096       0.006533   47.04      0.520731   47.57      4   
+Commencing write performance test: Fri Oct  5 18:58:59 2018
+write     683.72     4096       4096       0.006433   47.48      0.437146   47.93      5   
+Commencing write performance test: Fri Oct  5 18:59:52 2018
+write     608.24     4096       4096       0.006560   53.46      0.403468   53.87      6   
+Commencing write performance test: Fri Oct  5 19:00:49 2018
+write     721.87     4096       4096       0.006587   45.11      0.276300   45.39      7   
+Commencing write performance test: Fri Oct  5 19:01:39 2018
+write     709.38     4096       4096       0.007245   45.79      0.397798   46.19      8   
+Commencing write performance test: Fri Oct  5 19:02:30 2018
+write     685.27     4096       4096       0.007027   47.43      0.379840   47.82      9   
+Max Write: 721.87 MiB/sec (756.93 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write         721.87     608.24     681.64      33.77     180.47     152.06     170.41       8.44   48.19752     0    128  16   10   0     0        1         0    0     64  4194304  4194304   32768.0 HDF5      0
+Finished            : Fri Oct  5 19:03:18 2018
