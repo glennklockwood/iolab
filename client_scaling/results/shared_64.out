@@ -1,0 +1,52 @@
+IOR-3.2.0: MPI Coordinated Test of Parallel I/O
+Began               : Mon Oct  8 17:09:27 2018
+Command line        : /global/homes/g/glock/sc18_pio/bin/ior -s 8 -b 8388608 -t 8388608 -o /global/cscratch1/sd/glock/one_stripe/tempFile -O filePerProc=0 -f posix.ior
+Machine             : Linux nid07452
+Start time skew across all tasks: 0.01 sec
+TestID              : 0
+StartTime           : Mon Oct  8 17:09:27 2018
+Path                : /global/cscratch1/sd/glock/one_stripe
+FS                  : 27719.5 TiB   Used FS: 66.8%   Inodes: 5955.2 Mi   Used Inodes: 34.2%
+Participating tasks: 1024
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /global/cscratch1/sd/glock/one_stripe/tempFile
+access              : single-shared-file
+type                : independent
+segments            : 8
+ordering in a file  : sequential
+ordering inter file : no tasks offsets
+tasks               : 1024
+clients per node    : 16
+repetitions         : 5
+xfersize            : 8 MiB
+blocksize           : 8 MiB
+aggregate filesize  : 64 GiB
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+Commencing write performance test: Mon Oct  8 17:09:27 2018
+write     2270.03    8192       8192       0.052543   28.82      0.002199   28.87      0   
+remove    -          -          -          -          -          -          0.003648   0   
+Commencing write performance test: Mon Oct  8 17:09:56 2018
+write     2168.63    8192       8192       0.044534   30.17      0.002191   30.22      1   
+remove    -          -          -          -          -          -          0.027349   1   
+Commencing write performance test: Mon Oct  8 17:10:26 2018
+write     2132.05    8192       8192       0.055761   30.68      0.002531   30.74      2   
+remove    -          -          -          -          -          -          0.002606   2   
+Commencing write performance test: Mon Oct  8 17:10:57 2018
+write     2142.41    8192       8192       0.051941   30.54      0.002137   30.59      3   
+remove    -          -          -          -          -          -          0.002791   3   
+Commencing write performance test: Mon Oct  8 17:11:28 2018
+write     2236.75    8192       8192       0.060661   29.24      0.002301   29.30      4   
+remove    -          -          -          -          -          -          0.002572   4   
+Max Write: 2270.03 MiB/sec (2380.30 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write        2270.03    2132.05    2189.97      54.17     283.75     266.51     273.75       6.77   29.94361     0   1024  16    5   0     0        1         0    0      8  8388608  8388608   65536.0 POSIX      0
+Finished            : Mon Oct  8 17:11:57 2018
