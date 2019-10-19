@@ -1,0 +1,11 @@
+IOR START
+fsync=1
+intraTestBarriers=1
+repetitions=1
+verbose=0
+
+api=POSIX
+collective=0
+writefile=1
+RUN
+IOR STOP

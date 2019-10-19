@@ -1,0 +1,38 @@
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Fri Oct 18 16:19:31 2019
+Command line        : /global/homes/g/glock/src/git/ior/test/ior-3.3.0+dev/src/ior -s 512 -b 1048576 -t 1048576 -o /global/cscratch1/sd/glock/one_stripe/tempFile -O filePerProc=1 -f posix.ior
+Machine             : Linux nid02697
+TestID              : 0
+StartTime           : Fri Oct 18 16:19:31 2019
+Path                : /global/cscratch1/sd/glock/one_stripe
+FS                  : 27503.0 TiB   Used FS: 67.3%   Inodes: 5955.2 Mi   Used Inodes: 23.5%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /global/cscratch1/sd/glock/one_stripe/tempFile
+access              : file-per-process
+type                : independent
+segments            : 512
+ordering in a file  : sequential
+ordering inter file : no tasks offsets
+nodes               : 16
+tasks               : 256
+clients per node    : 16
+repetitions         : 1
+xfersize            : 1 MiB
+blocksize           : 1 MiB
+aggregate filesize  : 128 GiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+write     47388      48070      2.11        1024.00    1024.00    0.037404   2.73       0.002945   2.77       0   
+remove    -          -          -           -          -          -          -          -          1.11       0   
+Max Write: 47387.87 MiB/sec (49689.78 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write       47387.87   47387.87   47387.87       0.00   47387.87   47387.87   47387.87       0.00    2.76594         NA            NA     0    256  16    1   1     0        1         0    0    512  1048576  1048576  131072.0 POSIX      0
+Finished            : Fri Oct 18 16:19:34 2019
