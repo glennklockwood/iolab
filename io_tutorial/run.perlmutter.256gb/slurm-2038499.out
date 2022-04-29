@@ -1,0 +1,270 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Tue Apr 26 15:47:37 2022
+Command line        : /global/homes/g/glock/src/iopup/src/ior/bin.muller/ior -t 1m -b 64m -s 64
+Machine             : Linux nid002256
+TestID              : 0
+StartTime           : Tue Apr 26 15:47:37 2022
+Path                : testFile
+FS                  : 33224.4 TiB   Used FS: 81.5%   Inodes: 33409.2 Mi   Used Inodes: 0.5%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : testFile
+access              : single-shared-file
+type                : independent
+segments            : 64
+ordering in a file  : sequential
+ordering inter file : no tasks offsets
+nodes               : 4
+tasks               : 64
+clients per node    : 16
+repetitions         : 1
+xfersize            : 1 MiB
+blocksize           : 64 MiB
+aggregate filesize  : 256 GiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+write     8691       8692       0.440605    65536      1024.00    0.001022   30.16      3.67       30.16      0   
+read      109561     109578     0.007788    65536      1024.00    0.001801   2.39       1.96       2.39       0   
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write        8691.47    8691.47    8691.47       0.00    8691.47    8691.47    8691.47       0.00   30.16105         NA            NA     0     64  16    1   0     0        1         0    0     64 67108864  1048576  262144.0 POSIX      0
+read       109560.92  109560.92  109560.92       0.00  109560.92  109560.92  109560.92       0.00    2.39268         NA            NA     0     64  16    1   0     0        1         0    0     64 67108864  1048576  262144.0 POSIX      0
+Finished            : Tue Apr 26 15:48:21 2022
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Tue Apr 26 15:48:27 2022
+Command line        : /global/homes/g/glock/src/iopup/src/ior/bin.muller/ior -t 1m -b 64m -s 64 -F
+Machine             : Linux nid002256
+TestID              : 0
+StartTime           : Tue Apr 26 15:48:27 2022
+Path                : testFile.00000000
+FS                  : 33224.4 TiB   Used FS: 81.5%   Inodes: 33409.2 Mi   Used Inodes: 0.5%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : testFile
+access              : file-per-process
+type                : independent
+segments            : 64
+ordering in a file  : sequential
+ordering inter file : no tasks offsets
+nodes               : 4
+tasks               : 64
+clients per node    : 16
+repetitions         : 1
+xfersize            : 1 MiB
+blocksize           : 64 MiB
+aggregate filesize  : 256 GiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+write     73890      73900      0.053287    65536      1024.00    0.004245   3.55       0.180686   3.55       0   
+read      500838     501084     0.007950    65536      1024.00    0.000517   0.523154   0.121649   0.523411   0   
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write       73889.73   73889.73   73889.73       0.00   73889.73   73889.73   73889.73       0.00    3.54777         NA            NA     0     64  16    1   1     0        1         0    0     64 67108864  1048576  262144.0 POSIX      0
+read       500837.74  500837.74  500837.74       0.00  500837.74  500837.74  500837.74       0.00    0.52341         NA            NA     0     64  16    1   1     0        1         0    0     64 67108864  1048576  262144.0 POSIX      0
+Finished            : Tue Apr 26 15:48:36 2022
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Tue Apr 26 15:48:41 2022
+Command line        : /global/homes/g/glock/src/iopup/src/ior/bin.muller/ior -t 1m -b 64m -s 64 -F -C
+Machine             : Linux nid002256
+TestID              : 0
+StartTime           : Tue Apr 26 15:48:41 2022
+Path                : testFile.00000000
+FS                  : 33224.4 TiB   Used FS: 81.5%   Inodes: 33409.2 Mi   Used Inodes: 0.5%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : testFile
+access              : file-per-process
+type                : independent
+segments            : 64
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 4
+tasks               : 64
+clients per node    : 16
+repetitions         : 1
+xfersize            : 1 MiB
+blocksize           : 64 MiB
+aggregate filesize  : 256 GiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+write     65696      65705      0.056341    65536      1024.00    0.240392   3.99       0.616709   3.99       0   
+read      28620      28621      0.129104    65536      1024.00    0.000584   9.16       1.48       9.16       0   
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write       65695.87   65695.87   65695.87       0.00   65695.87   65695.87   65695.87       0.00    3.99027         NA            NA     0     64  16    1   1     1        1         0    0     64 67108864  1048576  262144.0 POSIX      0
+read        28620.45   28620.45   28620.45       0.00   28620.45   28620.45   28620.45       0.00    9.15932         NA            NA     0     64  16    1   1     1        1         0    0     64 67108864  1048576  262144.0 POSIX      0
+Finished            : Tue Apr 26 15:48:59 2022
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Tue Apr 26 15:49:03 2022
+Command line        : /global/homes/g/glock/src/iopup/src/ior/bin.muller/ior -t 1m -b 64m -s 64 -F -C -e
+Machine             : Linux nid002256
+TestID              : 0
+StartTime           : Tue Apr 26 15:49:03 2022
+Path                : testFile.00000000
+FS                  : 33224.4 TiB   Used FS: 81.5%   Inodes: 33409.2 Mi   Used Inodes: 0.5%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : testFile
+access              : file-per-process
+type                : independent
+segments            : 64
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 4
+tasks               : 64
+clients per node    : 16
+repetitions         : 1
+xfersize            : 1 MiB
+blocksize           : 64 MiB
+aggregate filesize  : 256 GiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+write     73117      73128      0.055084    65536      1024.00    0.003953   3.58       0.149729   3.59       0   
+read      31028      31029      0.130552    65536      1024.00    0.000614   8.45       0.173151   8.45       0   
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write       73117.09   73117.09   73117.09       0.00   73117.09   73117.09   73117.09       0.00    3.58526         NA            NA     0     64  16    1   1     1        1         0    0     64 67108864  1048576  262144.0 POSIX      0
+read        31027.52   31027.52   31027.52       0.00   31027.52   31027.52   31027.52       0.00    8.44876         NA            NA     0     64  16    1   1     1        1         0    0     64 67108864  1048576  262144.0 POSIX      0
+Finished            : Tue Apr 26 15:49:20 2022
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Tue Apr 26 15:49:21 2022
+Command line        : /global/homes/g/glock/src/iopup/src/ior/bin.muller/ior -t 1m -b 64m -s 64 -F -e --posix.odirect
+Machine             : Linux nid002256
+TestID              : 0
+StartTime           : Tue Apr 26 15:49:21 2022
+Path                : testFile.00000000
+FS                  : 33224.4 TiB   Used FS: 81.5%   Inodes: 33409.2 Mi   Used Inodes: 0.5%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : testFile
+access              : file-per-process
+type                : independent
+segments            : 64
+ordering in a file  : sequential
+ordering inter file : no tasks offsets
+nodes               : 4
+tasks               : 64
+clients per node    : 16
+repetitions         : 1
+xfersize            : 1 MiB
+blocksize           : 64 MiB
+aggregate filesize  : 256 GiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+write     30024      30026      0.098071    65536      1024.00    0.003855   8.73       3.93       8.73       0   
+read      57756      57761      0.059762    65536      1024.00    0.000433   4.54       1.26       4.54       0   
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write       30024.32   30024.32   30024.32       0.00   30024.32   30024.32   30024.32       0.00    8.73106         NA            NA     0     64  16    1   1     0        1         0    0     64 67108864  1048576  262144.0 POSIX      0
+read        57756.29   57756.29   57756.29       0.00   57756.29   57756.29   57756.29       0.00    4.53880         NA            NA     0     64  16    1   1     0        1         0    0     64 67108864  1048576  262144.0 POSIX      0
+Finished            : Tue Apr 26 15:49:34 2022
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Tue Apr 26 15:49:38 2022
+Command line        : /global/homes/g/glock/src/iopup/src/ior/bin.muller/ior -t 1m -b 64m -s 64 -C -e
+Machine             : Linux nid002256
+TestID              : 0
+StartTime           : Tue Apr 26 15:49:38 2022
+Path                : testFile
+FS                  : 33224.4 TiB   Used FS: 81.5%   Inodes: 33409.2 Mi   Used Inodes: 0.5%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : testFile
+access              : single-shared-file
+type                : independent
+segments            : 64
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 4
+tasks               : 64
+clients per node    : 16
+repetitions         : 1
+xfersize            : 1 MiB
+blocksize           : 64 MiB
+aggregate filesize  : 256 GiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+write     8695       8695       0.439776    65536      1024.00    0.000867   30.15      3.29       30.15      0   
+read      11312      11312      0.346413    65536      1024.00    0.001859   23.17      16.19      23.17      0   
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write        8695.15    8695.15    8695.15       0.00    8695.15    8695.15    8695.15       0.00   30.14830         NA            NA     0     64  16    1   0     1        1         0    0     64 67108864  1048576  262144.0 POSIX      0
+read        11311.99   11311.99   11311.99       0.00   11311.99   11311.99   11311.99       0.00   23.17399         NA            NA     0     64  16    1   0     1        1         0    0     64 67108864  1048576  262144.0 POSIX      0
+Finished            : Tue Apr 26 15:50:43 2022
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Tue Apr 26 15:50:47 2022
+Command line        : /global/homes/g/glock/src/iopup/src/ior/bin.muller/ior -t 1m -b 64m -s 64 -C -e
+Machine             : Linux nid002256
+TestID              : 0
+StartTime           : Tue Apr 26 15:50:47 2022
+Path                : testFile
+FS                  : 33224.4 TiB   Used FS: 81.5%   Inodes: 33409.2 Mi   Used Inodes: 0.5%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : testFile
+access              : single-shared-file
+type                : independent
+segments            : 64
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 4
+tasks               : 64
+clients per node    : 16
+repetitions         : 1
+xfersize            : 1 MiB
+blocksize           : 64 MiB
+aggregate filesize  : 256 GiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+write     8603       8604       0.420230    65536      1024.00    0.000853   30.47      4.09       30.47      0   
+read      11029      11030      0.360499    65536      1024.00    0.001719   23.77      3.03       23.77      0   
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write        8603.48    8603.48    8603.48       0.00    8603.48    8603.48    8603.48       0.00   30.46953         NA            NA     0     64  16    1   0     1        1         0    0     64 67108864  1048576  262144.0 POSIX      0
+read        11029.44   11029.44   11029.44       0.00   11029.44   11029.44   11029.44       0.00   23.76766         NA            NA     0     64  16    1   0     1        1         0    0     64 67108864  1048576  262144.0 POSIX      0
+Finished            : Tue Apr 26 15:51:52 2022

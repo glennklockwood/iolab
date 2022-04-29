@@ -1,0 +1,40 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Tue Apr 26 14:30:42 2022
+Command line        : /global/homes/g/glock/src/git/ior/install.cori/bin/ior -t 1m -b 1m -s 256 -C -e
+Machine             : Linux nid00212
+TestID              : 0
+StartTime           : Tue Apr 26 14:30:42 2022
+Path                : testFile
+FS                  : 443.6 TiB   Used FS: 37.3%   Inodes: 456.4 Mi   Used Inodes: 5.1%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : testFile
+access              : single-shared-file
+type                : independent
+segments            : 256
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 4
+tasks               : 64
+clients per node    : 16
+repetitions         : 1
+xfersize            : 1 MiB
+blocksize           : 1 MiB
+aggregate filesize  : 16 GiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+write     178.22     178.23     91.92       1024.00    1024.00    0.001285   91.93      90.54      91.93      0   
+read      1692.08    1692.18    9.63        1024.00    1024.00    0.004767   9.68       0.294706   9.68       0   
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write         178.22     178.22     178.22       0.00     178.22     178.22     178.22       0.00   91.92923         NA            NA     0     64  16    1   0     1        1         0    0    256  1048576  1048576   16384.0 POSIX      0
+read         1692.08    1692.08    1692.08       0.00    1692.08    1692.08    1692.08       0.00    9.68278         NA            NA     0     64  16    1   0     1        1         0    0    256  1048576  1048576   16384.0 POSIX      0
+darshan_library_warning: unable to create log file /global/cscratch1/sd/darshanlogs/2022/4/26/glock_ior_id13264627-15302_4-26-52242-6986162882531890915.darshan_partial.
+Finished            : Tue Apr 26 14:32:25 2022

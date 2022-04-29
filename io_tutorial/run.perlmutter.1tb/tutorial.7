@@ -1,0 +1,39 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Tue Apr 26 15:23:52 2022
+Command line        : /global/homes/g/glock/src/iopup/src/ior/bin.muller/ior -t 1m -b 64m -s 256 -C -e
+Machine             : Linux nid003224
+TestID              : 0
+StartTime           : Tue Apr 26 15:23:52 2022
+Path                : testFile
+FS                  : 33224.4 TiB   Used FS: 81.5%   Inodes: 33409.2 Mi   Used Inodes: 0.5%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : testFile
+access              : single-shared-file
+type                : independent
+segments            : 256
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 4
+tasks               : 64
+clients per node    : 16
+repetitions         : 1
+xfersize            : 1 MiB
+blocksize           : 64 MiB
+aggregate filesize  : 1 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+write     7892       7892       2.08        65536      1024.00    0.000879   132.87     12.70      132.87     0   
+read      14176      14176      1.14        65536      1024.00    0.001923   73.97      3.69       73.97      0   
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write        7891.77    7891.77    7891.77       0.00    7891.77    7891.77    7891.77       0.00  132.86950         NA            NA     0     64  16    1   0     1        1         0    0    256 67108864  1048576 1048576.0 POSIX      0
+read        14175.58   14175.58   14175.58       0.00   14175.58   14175.58   14175.58       0.00   73.97059         NA            NA     0     64  16    1   0     1        1         0    0    256 67108864  1048576 1048576.0 POSIX      0
+Finished            : Tue Apr 26 15:27:40 2022
