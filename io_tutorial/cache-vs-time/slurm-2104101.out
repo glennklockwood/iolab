@@ -1,0 +1,71 @@
+Service now listening. Port: 1611
+Service now listening. Port: 1611
+Service now listening. Port: 1611
+Service now listening. Port: 1611
+Preparing new benchmark phase... (ISO DATE: 2022-05-03T17:43:46-0700)
+Preparing new benchmark phase... (ISO DATE: 2022-05-03T17:43:46-0700)
+Preparing new benchmark phase... (ISO DATE: 2022-05-03T17:43:46-0700)
+Preparing new benchmark phase... (ISO DATE: 2022-05-03T17:43:46-0700)
+
+
+
+
+OPERATION RESULT TYPE        FIRST DONE  LAST DONE
+========= ================   ==========  =========
+READ      Elapsed ms       :      35924      48559
+          Files/s          :          0          1
+          IOPS             :      88035      86373
+          Throughput MiB/s :      11004      10796
+          Total MiB        :     395328     524288
+          Files total      :          1         64
+---
+
+READ      Elapsed ms       :      32910      49533
+          Files/s          :          0          1
+          IOPS             :      87822      84676
+          Throughput MiB/s :      10977      10584
+          Total MiB        :     361279     524288
+          Files total      :          1         64
+---
+
+READ      Elapsed ms       :      37121      49840
+          Files/s          :          0          1
+          IOPS             :      86487      84154
+          Throughput MiB/s :      10810      10519
+          Total MiB        :     401319     524288
+          Files total      :          1         64
+---
+
+READ      Elapsed ms       :      37362      54752
+          Files/s          :          0          1
+          IOPS             :      84164      76604
+          Throughput MiB/s :      10520       9575
+          Total MiB        :     393070     524288
+          Files total      :          1         64
+---
+READ      Elapsed ms       :      32910      54752
+
+          Files/s          :          0          4
+          IOPS             :     347564     306417
+          Throughput MiB/s :      43445      38302
+          Total MiB        :    1429797    2097152
+          Files total      :          1        256
+---
+HTTP server error. Message: Operation canceled; Client: ::ffff:10.249.22.53:59086; ErrorCode: 125; ErrorCategory: system
+Shutting down as requested by client. Client: ::ffff:10.249.22.53
+Service stopped listening. Port: 1611
+Shutting down as requested by client. Client: ::ffff:10.249.22.53
+Service stopped listening. Port: 1611
+Shutting down as requested by client. Client: ::ffff:10.249.22.53
+Service stopped listening. Port: 1611
+HTTP server error. Message: Operation canceled; Client: ::ffff:10.249.22.53:42324; ErrorCode: 125; ErrorCategory: system
+Shutting down as requested by client. Client: ::ffff:10.249.22.53
+Service stopped listening. Port: 1611
+HTTP service ended.
+nid003360:1611: OK
+nid003357:1611: OK
+nid003356:1611: OK
+nid003361:1611: OK
+HTTP service ended.
+HTTP service ended.
+HTTP service ended.

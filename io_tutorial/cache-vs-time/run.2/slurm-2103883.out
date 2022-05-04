@@ -1,0 +1,48 @@
+Service now listening. Port: 1611
+Preparing new benchmark phase... (ISO DATE: 2022-05-03T17:10:40-0700)
+
+OPERATION RESULT TYPE        FIRST DONE  LAST DONE
+========= ================   ==========  =========
+SYNC      Elapsed ms       :          0          1
+---
+
+SYNC      Elapsed ms       :          0          1
+---
+MKDIRS    Elapsed ms       :         13         21
+          Dirs/s           :         71       3039
+          Dirs total       :          1         64
+---
+
+MKDIRS    Elapsed ms       :         13         21
+          Dirs/s           :       4588       3039
+          Dirs total       :         64         64
+---
+SYNC      Elapsed ms       :          0          1
+---
+
+SYNC      Elapsed ms       :          0          1
+---
+WRITE     Elapsed ms       :     115576     149099
+          Files/s          :          0          0
+          IOPS             :      30655      28130
+          Throughput MiB/s :      15327      14065
+          Total MiB        :    1771519    2097152
+WRITE     Elapsed ms       :     115576     149099
+          Files total      :          1         64
+---
+
+          Files/s          :          0          0
+          IOPS             :      30700      28130
+          Throughput MiB/s :      15350      14065
+          Total MiB        :    1774143    2097152
+          Files total      :          1         64
+---
+SYNC      Elapsed ms       :          0        428
+---
+
+SYNC      Elapsed ms       :          0        428
+---
+Shutting down as requested by client. Client: ::ffff:10.249.18.75
+Service stopped listening. Port: 1611
+nid002825:1611: OK
+HTTP service ended.

@@ -1,0 +1,18 @@
+ISO DATE: 2022-05-03T17:42:33-0700
+COMMAND LINE: "/global/homes/g/glock/src/elbencho-testing/src/elbencho/bin.perlmutter/elbencho" "--hosts" "nid003356,nid003357,nid003360,nid003361," "--threads" "64" "--files" "1" "--size" "8g" "--block" "128k" "--mkdirs" "--write" "--dirsharing" "--resfile" "bw-write.64threads.2104100.out" "--csvfile" "bw-write.64threads.2104100.csv" "--livecsv" "bw-write.64threads.2104100.live.csv" "--liveint" "250" "--nolive" "/pscratch/sd/g/glock" 
+
+OPERATION RESULT TYPE        FIRST DONE  LAST DONE
+========= ================   ==========  =========
+MKDIRS    Elapsed ms       :          2         21
+          Dirs/s           :      47707      12052
+          Dirs total       :        128        256
+---
+
+WRITE     Elapsed ms       :      24125      37296
+          Files/s          :          0          6
+          IOPS             :     552137     449833
+          Throughput MiB/s :      69017      56229
+          Total MiB        :    1665098    2097152
+          Files total      :          1        256
+---
+
